@@ -1,9 +1,9 @@
-name: Deploy React App to GitHub Pages
+name: Deploy React App
 
 on:
   push:
-    branches: [ main ]  # Or 'master' depending on your default branch
-  workflow_dispatch:    # Allows manual trigger from GitHub UI
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,22 +14,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
+      # Changed from npm ci to npm install
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build React app
         run: npm run build
         env:
-          CI: false  # Prevents treating warnings as errors
+          CI: false
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
