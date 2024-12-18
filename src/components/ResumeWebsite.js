@@ -7,11 +7,11 @@ const ResumeWebsite = () => {
     title: "Machine Learning Engineer",
     contact: {
       email: "sukhrob.ikromov0@gmail.com",
-      phone: "+82-10-2115-7720",
       location: "Naju-si, Korea",
-      linkedin: "www.linkedin.com/in/sukhrob-ikromov"
+      linkedin: "www.linkedin.com/in/sukhrob-ikromov",
+      github: "github.com/Ikromov247"
     },
-    summary: "Machine Learning Engineer experienced in designing and optimizing machine learning pipelines, API deployments, and database management. Adept at improving model performance by applying both statistical methods and industry-specific concepts. Proven track record in enhancing system efficiency and automating workflows, significantly reducing manual intervention.",
+    summary: "Machine Learning Engineer experienced in designing and optimizing machine learning pipelines, API deployments, and database management. Adept at improving model performance by applying both statistical methods and industry-specific concepts. Proven track record in enhancing system efficiency and automating workflows, significantly reducing manual intervention. Passionate about enabling companies to leverage AI solutions and seamlessly integrate them into existing systems, minimizing operational overhead.",
     experience: [
       {
         company: "Rec's Innovation",
@@ -20,9 +20,14 @@ const ResumeWebsite = () => {
         highlights: [
           "Architected and implemented end-to-end ML pipeline including data processing, feature engineering, training, inference, and monitoring components",
           "Designed robust API endpoints using FastAPI and Uvicorn for real-time anomaly detection and power prediction, achieving uptime of 99%",
-          "Reduced model deployment time from 1 hour to 1 minute by implementing CI/CD pipelines using Github Actions",
-          "Achieved instant response to model performance issues by developing monitoring system using Prometheus and Grafana",
-          "Streamlined onboarding through comprehensive documentation and project templates"
+          "Achieved cross-platform compatibility on all major OSs by containerizing machine learning systems using Docker",
+          "Reduced model deployment time from 1 hour to 1 minute by implementing CI/CD pipelines using Github Actions and integrating Docker cache",
+          "Automated ML training and inference using a custom orchestrator",
+          "Minimized deployment errors by adding integration tests into the CI/CD pipelines",
+          "Minimized production downtimes by implementing rollback deployment using Github Actions and Docker",
+          "Enabled seamless integration of ML pipelines into the company's power management system by collaborating with the backend team to align model outputs with system requirements",
+          "Achieved instant response to model performance issues, by developing a monitoring and alerting system using Prometheus and Grafana",
+          "Streamlined onboarding of new members by creating comprehensive documentation for maintaining existing projects and instructions for creating new projects based on a custom template"
         ]
       }
     ],
@@ -90,16 +95,20 @@ const ResumeWebsite = () => {
               <span>{resumeData.contact.email}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Phone size={16} />
-              <span>{resumeData.contact.phone}</span>
-            </div>
-            <div className="flex items-center gap-2">
               <MapPin size={16} />
               <span>{resumeData.contact.location}</span>
             </div>
             <div className="flex items-center gap-2">
               <Linkedin size={16} />
-              <span>{resumeData.contact.linkedin}</span>
+              <a href={`https://${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                {resumeData.contact.linkedin}
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Github size={16} />
+              <a href={`https://${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                {resumeData.contact.github}
+              </a>
             </div>
           </div>
         </div>
