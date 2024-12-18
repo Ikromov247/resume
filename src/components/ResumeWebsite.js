@@ -7,7 +7,7 @@ const ResumeWebsite = () => {
     title: "Machine Learning Engineer",
     contact: {
       email: "sukhrob.ikromov0@gmail.com",
-      phone: "",
+      phone: "+82-10-2115-7720",
       location: "Naju-si, Korea",
       linkedin: "www.linkedin.com/in/sukhrob-ikromov"
     },
