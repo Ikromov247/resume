@@ -1,0 +1,2 @@
+# this deploys the app to github pages gh-pages branch
+npm run deploy -- -m "Deploy React app to GitHub Pages" 
