@@ -9,8 +9,7 @@ const ResumeWebsite = () => {
       email: "sukhrob.ikromov0@gmail.com",
       phone: "",
       location: "Naju-si, Korea",
-      linkedin: "www.linkedin.com/in/sukhrob-ikromov",
-      Github: "www.github.com/Ikromov247"
+      linkedin: "www.linkedin.com/in/sukhrob-ikromov"
     },
     summary: "Machine Learning Engineer experienced in designing and optimizing machine learning pipelines, API deployments, and database management. Adept at improving model performance by applying both statistical methods and industry-specific concepts. Proven track record in enhancing system efficiency and automating workflows, significantly reducing manual intervention.",
     experience: [
