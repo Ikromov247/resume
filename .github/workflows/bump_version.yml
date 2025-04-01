@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0  # Required for git versioning
       
       - name: Bump version
-        uses: ./  # Use local action
+        uses: Ikromov247/bump_version@v0.9.1
         with:
           file: 'package.json'
           bump_type: 'patch'  # Options: major, minor, patch, git
