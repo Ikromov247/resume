@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, Github, Linkedin, MapPin } from 'lucide-react';
+import { Github, Linkedin, MapPin } from 'lucide-react';
 
 const ResumeWebsite = () => {
   const resumeData = {
@@ -11,23 +11,29 @@ const ResumeWebsite = () => {
       linkedin: "www.linkedin.com/in/sukhrob-ikromov",
       github: "github.com/Ikromov247"
     },
-    summary: "Machine Learning Engineer experienced in designing and optimizing machine learning pipelines, API deployments, and database management. Adept at improving model performance by applying both statistical methods and industry-specific concepts. Proven track record in enhancing system efficiency and automating workflows, significantly reducing manual intervention. Passionate about enabling companies to leverage AI solutions and seamlessly integrate them into existing systems, minimizing operational overhead.",
+    summary: "Machine Learning Engineer experienced in designing and deploying machine learning pipelines. Adept at improving model performance by applying both statistical methods and industry-specific concepts. Proven track record in automating workflows, significantly reducing manual intervention. Passionate about enabling companies to leverage AI solutions and seamlessly integrate them into existing systems, minimizing operational overhead.",
     experience: [
       {
         company: "Rec's Innovation",
-        position: "MLOps Engineer",
-        period: "June 2024 - Present",
+        position: "Lead AI Engineer",
+        period: "March 2025 - June 2025",
         highlights: [
-          "Architected and implemented end-to-end ML pipeline including data processing, feature engineering, training, inference, and monitoring components",
-          "Designed robust API endpoints using FastAPI and Uvicorn for real-time anomaly detection and power prediction, achieving uptime of 99%",
-          "Achieved cross-platform compatibility on all major OSs by containerizing machine learning systems using Docker",
-          "Reduced model deployment time from 1 hour to 1 minute by implementing CI/CD pipelines using Github Actions and integrating Docker cache",
-          "Automated ML training and inference using a custom orchestrator",
+          "Applied advanced statistical techniques including correlation analysis, distribution modeling, and mean reversion testing to validate 13 research hypotheses across 100,000+ bidding records",
+          "Implemented and evaluated 10+ machine learning approaches across 1000+ automated experiments using Optuna optimization, systematically testing reinforcement learning, Bayesian probability models, and ensemble methods",
+          "Streamlined onboarding of new members and transfer of maintenance responsibilities by creating 24 pages of comprehensive documentation and 4 video tutorials"
+        ]
+      },
+      {
+        company: "Rec's Innovation",
+        position: "MLOps Engineer",
+        period: "June 2024 - February 2025",
+        highlights: [
+          "Architected and implemented 3 end-to-end ML pipelines with robust FastAPI endpoints, achieving 99% uptime across 9 months of operation",
+          "Achieved cross-platform compatibility on all major OSs by containerizing ML systems using Docker, reducing environment setup time on a clean machine from 1 day to 2 hours",
+          "Reduced model deployment time from 1 hour to 1 minute by implementing CI/CD pipelines using Github Actions and integrating Docker cache optimization",
           "Minimized deployment errors by adding integration tests into the CI/CD pipelines",
-          "Minimized production downtimes by implementing rollback deployment using Github Actions and Docker",
-          "Enabled seamless integration of ML pipelines into the company's power management system by collaborating with the backend team to align model outputs with system requirements",
-          "Achieved instant response to model performance issues, by developing a monitoring and alerting system using Prometheus and Grafana",
-          "Streamlined onboarding of new members by creating comprehensive documentation for maintaining existing projects and instructions for creating new projects based on a custom template"
+          "Automated ML training and inference using a custom scheduler module, removing the need for manual intervention",
+          "Reduced incident response time from manual discovery to automated instant alerts by developing a monitoring system using Prometheus and Grafana"
         ]
       }
     ],
@@ -41,7 +47,7 @@ const ResumeWebsite = () => {
         details: [
           "Minor in Software Engineering",
           "GPA: 4.28/4.50",
-          "Relevant Coursework: Machine Learning, Deep Learning, Advanced Deep Learning Algorithms, NLP, Database Management"
+          "Coursework: Machine Learning, Deep Learning, Advanced Deep Learning Algorithms, Calculus, Natural Language Processing, Database management, Software Engineering principles"
         ]
       },
       {
@@ -51,9 +57,7 @@ const ResumeWebsite = () => {
         period: "Sept 2008 - July 2019",
         details: [
           "Specialized in Math",
-          "GPA: 3.92/4.00",
-          "IELTS: 8.5",
-          "SAT: 1500"
+          "GPA: 3.92/4.00"
         ]
       }
     ],
@@ -61,11 +65,10 @@ const ResumeWebsite = () => {
       {
         title: "Woosong University Capstone Project",
         period: "March 2024 - June 2024",
-        description: "Led a team of 4 students to develop a computer vision model and pipeline",
+        description: "Led a team of 4 students to develop a computer vision model and a pipeline to detect an input object from a collection of videos",
         achievements: [
-          "4th place in university-wide LINC Software contest",
-          "Developed object detection system from video collections",
-          "Managed communication with partner company GMDSoft"
+          "Gained the 4th place in the university-wide LINC Software contest competing with 20 other teams",
+          "Divided tasks and set main objectives of the project while communicating with the supervising company GMDSoft"
         ]
       },
       {
@@ -76,7 +79,7 @@ const ResumeWebsite = () => {
     ],
     skills: {
       programming: ["Python", "Bash"],
-      tools: ["Docker", "Git", "Github Actions", "Caddy", "PostgreSQL", "MLflow", "Prometheus", "Grafana"],
+      tools: ["Docker", "Git", "PostgreSQL", "FastAPI", "PyTorch", "MLflow", "Prometheus", "Grafana", "Github Actions", "Uvicorn"],
       soft: ["Problem solving", "Cross-team collaboration", "Communication"]
     }
   };
@@ -90,10 +93,6 @@ const ResumeWebsite = () => {
           <h2 className="text-xl mt-2 text-blue-100">{resumeData.title}</h2>
           
           <div className="mt-6 flex flex-wrap gap-4 text-blue-100">
-            <div className="flex items-center gap-2">
-              <Mail size={16} />
-              <span>{resumeData.contact.email}</span>
-            </div>
             <div className="flex items-center gap-2">
               <MapPin size={16} />
               <span>{resumeData.contact.location}</span>
@@ -169,7 +168,7 @@ const ResumeWebsite = () => {
 
         {/* Projects */}
         <section className="mb-12 bg-white p-6 rounded-lg shadow-sm">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Projects</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Leadership & Extracurriculars</h3>
           {resumeData.projects.map((project, index) => (
             <div key={index} className="mb-8 last:mb-0">
               <div className="flex justify-between items-baseline">
